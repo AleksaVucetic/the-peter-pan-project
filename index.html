@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I'm Aleksa!</title>
+
+    <!-- favicon; -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- jquery & javascript; -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+    <!-- Bootstrap Script; -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS; -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome; -->
+    <script src="https://kit.fontawesome.com/26adbf8573.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!------------------------------ TITLE SECTION ------------------------------>
+
+    <section id="title" class="title-class">
+
+        <!---------- Nav Bar ---------->
+
+        <!-- Navbars require a wrapping '.navbar' with '.navbar-expand{-sm|-md|-lg|-xl|-xxl}' for responsive collapsing and color scheme classes; -->
+        <nav class="navbar navbar-expand-md navbar-custom">
+
+            <!-- 'avatar-container' is here just for containing picture and for giving it white background; -->
+            <div class="avatar-container">
+                <a class="navbar-brand" href="#title">
+                    <img src="images/profile-img.png" alt="Avatar" class="avatar">
+                </a>
+            </div>
+
+            <!-- This is button that collapses the menu (pay attention to 'data-target'); -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dataToCollapse"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fa-burger-custom"></i>
+            </button>
+
+            <!-- In order to be collapsed, 'id' must be EXACTLY THE SAME as 'data-target' from the 'button'; -->
+            <div class="collapse navbar-collapse" id="dataToCollapse">
+                <!-- '.navbar-nav' for a full-height and lightweight navigation (including support for dropdowns); -->
+                <ul class="navbar-nav ms-auto ul-custom">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#my-work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><span class="about-spn">Contact</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!---------- Top Container ---------->
+
+        <div class="top-container">
+
+            <!-- 'top-cloud-container' is here just so we can position the image in the way we want it to, and not to use 'float', 'clear' or 'position' properties; -->
+            <div class="top-cloud-container">
+                <img class="top-cloud" src="images/cloud.png" alt="Cloud Image">
+            </div>
+
+            <h1>I'm Aleksa</h1>
+
+            <!-- 'second-headline' class is here just in order not to shrink all 'h2' elements, except this one; -->
+            <h2 class="second-headline">a boy from <span class="underline-span">Neverland</span>.</h2>
+
+            <img class="bottom-cloud" src="images/cloud.png" alt="Cloud Image">
+
+            <!-- 'mountain-container' is here just so we can position the image in the way we want it to, and not to use 'float', 'clear' or 'position' properties; -->
+            <div class="mountain-container">
+                <img class="mountain-img" src="images/mountain.png" alt="Mountain Image">
+            </div>
+        </div>
+
+    </section>
+
+    <!------------------------------ MENU SECTION ------------------------------>
+
+    <section id="menu">
+
+        <!---------- Profile ---------->
+
+        <div class="profile">
+            <img class="profile-img" src="images/profile-photo.png" alt="Profile Photo">
+            <h2>Hello.</h2>
+            <p class="intro">I see the world through the eyes of a child. After all, the goal is to remain Peter Pan
+                forever! I &#128155 creativity and lasagna!</p>
+        </div>
+
+        <!---------- Menu ---------->
+
+        <!-- _'container-fluid' enables this 'div' to take 100% of width of the viewport; -->
+        <div class="container-fluid container-custom-menu">
+
+            <!-- _class 'row' makes it possible to have Bootstrap Grid System; -->
+            <div class="row">
+
+                <div class="col-md-3 col-custom">
+                    <a class="item-link" href="#about">
+                        <img class="item-img item-img-special" src="images/profile-img.png" alt="About">
+                        <h3 class="item-title">About Me</h3>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-custom">
+                    <a class="item-link" href="#education">
+                        <img class="item-img" src="images/education.png" alt="Education">
+                        <h3 class="item-title">Education</h3>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-custom">
+                    <a class="item-link" href="#experience">
+                        <img class="item-img" src="images/experience.png" alt="Experience">
+                        <h3 class="item-title">Experience</h3>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-custom">
+                    <a class="item-link" href="#my-work">
+                        <img class="item-img" src="images/my-work.png" alt="My Work">
+                        <h3 class="item-title">My Work</h3>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!------------------------------ ABOUT SECTION ------------------------------>
+
+    <section id="about">
+
+        <div class="container-fluid about-me">
+
+            <h2>About Me</h2>
+
+            <div class="about-me-item">
+                <!-- _even though it is not best practice to have multiple 'class' names, it was handy here to do it... especially because no JavaScript is used here; -->
+                <img class="general-img left-img peter-pan-img" src="images/peter-pan.png" alt="Peter Pan">
+                <h3>Even Though You Want To, Never Grow Up!</h3>
+                <p>Life is already serious as it is. Kids are different. By remaining one, we give ourselves an
+                    opportunity
+                    to dream, but also to work on our dreams.</p>
+            </div>
+
+            <div class="about-me-item">
+                <!-- _even though it is not best practice to have multiple 'class' names, it was handy here to do it... especially because no JavaScript is used here; -->
+                <img class="general-img right-img" src="images/book-icon.png" alt="Book">
+                <h3>Exploring Universe Created by Books!</h3>
+                <p>Each book is a universe of its own. All we have to do is take something from each universe and add to
+                    our creativity. That is all!</p>
+            </div>
+
+            <div class="about-me-item">
+                <!-- _even though it is not best practice to have multiple 'class' names, it was handy here to do it... especially because no JavaScript is used here; -->
+                <img class="general-img left-img" src="images/travel-icon.png" alt="Travel">
+                <h3>Collecting Moments, Not Things!</h3>
+                <p>Seeing the world makes us richer. It gives us memories. But it also teaches us. That's why we aim to
+                    run out of pages in our passports!</p>
+            </div>
+
+            <div class="about-me-item">
+                <!-- _even though it is not best practice to have multiple 'class' names, it was handy here to do it... especially because no JavaScript is used here; -->
+                <img class="general-img right-img" src="images/film-icon.png" alt="Film">
+                <h3>Movies Also Create Emotions!</h3>
+                <p>If we think about it, every single art form is involved in film in one way or another. There are many
+                    stories that we can experience by watching a movie.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!------------------------------ EDUCATION SECTION ------------------------------>
+
+    <section id="education">
+
+        <div class="container-fluid education-container">
+
+            <h2>Education</h2>
+
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item container-fluid">
+                        <h2 class="education-heading">Bachelor of Organizational Sciences</h2>
+                        <img class="education-img" src="images/fon.png" alt="Faculty of Organizational Sciences">
+                        <img class="country-img" src="images/serbia.png" alt="Serbia">
+                        <a class="college" href="http://www.fon.bg.ac.rs/" target="_blank">
+                            Faculty of Organizational Sciences, Belgrade, Serbia
+                        </a>
+                    </div>
+
+                    <div class="carousel-item container-fluid">
+                        <h2 class="education-heading">Exchange Student</h2>
+                        <img class="education-img" src="images/mdu.png" alt="dog-profile">
+                        <img class="country-img" src="images/sweden.png" alt="Sweden">
+                        <a class="college" href="https://www.mdu.se/?" target="_blank">
+                            Mälardalen University, Västerås, Sweden
+                        </a>
+                    </div>
+
+                    <div class="carousel-item container-fluid">
+                        <h2 class="education-heading">Exchange Student</h2>
+                        <img class="education-img" src="images/tuw.png" alt="dog-profile">
+                        <img class="country-img" src="images/austria.png" alt="Austria">
+                        <a class="college" href="https://www.tuwien.at/" target="_blank">
+                            Technische Universität Wien, Vienna, Austria
+                        </a>
+                    </div>
+
+                    <div class="carousel-item active container-fluid">
+                        <h2 class="education-heading">Master Engineer of Organizational Sciences</h2>
+                        <img class="education-img" src="images/fon.png" alt="Faculty of Organizational Sciences">
+                        <img class="country-img" src="images/serbia.png" alt="Serbia">
+                        <a class="college" href="http://www.fon.bg.ac.rs/" target="_blank">
+                            Faculty of Organizational Sciences, Belgrade, Serbia
+                        </a>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-target="#carouselControls" data-slide="prev">
+                    <i class="fa-solid fa-caret-left fa-hand-custom"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-target="#carouselControls" data-slide="next">
+                    <i class="fa-solid fa-caret-right fa-hand-custom"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!------------------------------ EXPERIENCE SECTION ------------------------------>
+
+    <section id="experience">
+
+        <div class="container-fluid experience">
+
+            <h2>Working Experience</h2>
+
+            <div class="experience-container">
+                <div class="item-box">
+                    <div class="exp-img-container">
+                        <a href="https://www.blackrock.com/corporate" target="_blank">
+                            <img class="exp-img" src="images/blackrock.png" alt="BlackRock">
+                        </a>
+                    </div>
+                    <div class="exp-text-container">
+                        <p class="company-name">BlackRock</p>
+                        <p class="position">Business Inteligence Consultant Intern</p>
+                        <p class="time-spent">September 2021 - May 2022</p>
+                    </div>
+                </div>
+                <div class="item-box">
+                    <div class="exp-img-container">
+                        <a href="https://www.blackrock.com/corporate" target="_blank">
+                            <img class="exp-img" src="images/blackrock.png" alt="BlackRock">
+                        </a>
+                    </div>
+                    <div class="exp-text-container">
+                        <p class="company-name">BlackRock</p>
+                        <p class="position">Business Inteligence Consultant</p>
+                        <p class="time-spent">May 2022 - present</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!------------------------------ MY WORK SECTION ------------------------------>
+
+    <section class="container-fluid my-work" id="my-work">
+
+        <h2 class="section-heading">My Work</h2>
+        <p class="description">All of my babies are a result of "learning by doing" concept.
+            Hope you like it!</p>
+
+        <div class="work-container">
+
+            <div class="work-column work-container-special">
+                <!-- Some of the lines bellow will have to be removed once the page is finished! -->
+                <a>
+                    <img class="work-img work-special-img" src="images/little-mermaid-project.JPG" alt="">
+                    <h3 class="work-title">The Little Mermaid Project</h3>
+                    <div class="tech-container">
+                        <div class="tech-item html">
+                            HTML
+                        </div>
+                        <div class="tech-item css">
+                            CSS
+                        </div>
+                        <div class="tech-item java-script">
+                            JavaScript
+                        </div>
+                        <div class="tech-item jquery">
+                            JQuery
+                        </div>
+                    </div>
+                </a>
+                <div class="work-behind-text">
+                    <div class="text">
+                        Work in Progress!
+                        <i class="fa-solid fa-ban"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-column">
+                <a href="https://aleksavucetic.github.io/the-beauty-and-the-beast-project/" target="_blank">
+                    <img class="work-img" src="images/beauty-and-the-beast-project.JPG" alt="">
+                    <h3 class="work-title">The Beauty and the Beast Project</h3>
+                    <div class="tech-container">
+                        <div class="tech-item html">
+                            HTML
+                        </div>
+                        <div class="tech-item css">
+                            CSS
+                        </div>
+                        <div class="tech-item java-script">
+                            JavaScript
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="work-column">
+                <a href="https://aleksavucetic.github.io/the-tarzan-project/" target="_blank">
+                    <img class="work-img" src="images/tarzan-project.JPG" alt="">
+                    <h3 class="work-title">The Tarzan Project</h3>
+                    <div class="tech-container">
+                        <div class="tech-item html">
+                            HTML
+                        </div>
+                        <div class="tech-item css">
+                            CSS
+                        </div>
+                        <div class="tech-item java-script">
+                            JavaScript
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="work-column">
+                <a href="https://aleksavucetic.github.io/the-lion-king-project/" target="_blank">
+                    <img class="work-img" src="images/lion-king-project.JPG" alt="">
+                    <h3 class="work-title">The Lion King Project</h3>
+                    <div class="tech-container">
+                        <div class="tech-item html">
+                            HTML
+                        </div>
+                        <div class="tech-item css">
+                            CSS
+                        </div>
+                        <div class="tech-item bootstrap">
+                            Bootstrap
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="work-column">
+                <a href="https://aleksavucetic.github.io/the-aladdin-project/" target="_blank">
+                    <img class="work-img" src="images/aladdin-project.JPG" alt="">
+                    <h3 class="work-title">The Aladdin Project</h3>
+                    <div class="tech-container">
+                        <div class="tech-item html">
+                            HTML
+                        </div>
+                        <div class="tech-item css">
+                            CSS
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="work-column">
+                <a href="https://aleksavucetic.github.io/PresentedByMe.../" target="_blank">
+                    <img class="work-img" src="images/created-by-me.JPG" alt="">
+                    <h3 class="work-title">The Created by Me Project</h3>
+                    <div class="tech-container">
+                        <div class="tech-item html">
+                            HTML
+                        </div>
+                        <div class="tech-item css">
+                            CSS
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!------------------------------ CONTACT SECTION ------------------------------>
+
+    <section id="contact">
+        <div class="contact-me">
+            <h2 class="contact-heading">Get In Touch</h2>
+            <h3 class="contact-heading-addition">If you want to share your view on how to remain a kid.</h3>
+            <p class="contact-message">You have some advice for me? &#127803 Please, use one of the social networks bellow to reach out!</p>
+        </div>
+
+        <div class="bottom-container">
+            <a class="footer-link" href="https://www.linkedin.com/in/aleksa-vucetic-3a9bb214a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="footer-link" href="https://www.instagram.com/aleksa.vucetic/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a class="footer-link" href="https://www.facebook.com/aleksa.vucetic.71" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <p class="copyright-message">© 2023 Aleksa Vucetic</p>
+        </div>
+    </section>
+
+</body>
+
+</html>

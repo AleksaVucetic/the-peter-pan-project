@@ -1,0 +1,804 @@
+/* Mogu ja to! */
+
+/* _font import; */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* ---------- RANDOM KNOWLEDGE SHARING ---------- */
+
+/* _when we have div (child) inside div (parent), and when we want to put some margin to the child then margin-top will be added to parent div as well. _in order to avoid that, we should just put 'overflow' property to parent element and set it to 'auto'; */
+
+/* _FLEXBOX
+
+    Flex container
+        display: flex;
+        flex-direction: row (default);
+        justify-content: centering in accordance with main-axis;
+        align-items: centering in accordance with cross-axis;
+        flex-wrap: wrap;
+        
+    Flex item(s)
+        flex-basis: same as widht;
+        flex_grow: we can also use this so as we shrink the window, the widht of the item will not be smaller then flex-basis;
+*/
+
+/* --------- -RANDOM KNOWLEDGE SHARING- --------- */
+
+* {
+    /* _the 'box-sizing' property defines how the width and height of an element are calculated: should they include padding and borders, or not; */
+    /* _'border-box' value indicates that the width and height properties (and min/max properties) include content, padding and border; */
+    box-sizing: border-box;
+
+    /* _the CSS margin properties are used to create space around elements, outside of any defined borders; */
+    padding: 0%;
+
+    /* _the CSS padding properties are used to generate space around an element's content, inside of any defined borders; */
+    margin: 0%;
+}
+
+/* _color variables; */
+:root {
+    --azureish-white: #e0eeeb;
+    --keppel: #48b199;
+    --deep-taupe: #715761;
+    --outer-space: #40514e;
+    --key-lime: #f0f58d;
+    --viridian-green: #11999E;
+}
+
+html {
+    background-color: var(--azureish-white);
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    color: var(--outer-space);
+    min-width: 200px;
+    max-width: 1500px;
+}
+
+h2,
+h3,
+.second-headline {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--keppel);
+}
+
+h1 {
+    font-size: 5.625rem;
+    color: var(--keppel);
+    font-family: 'Sacramento', cursive;
+    font-weight: bold;
+    line-height: .9;
+    margin-top: -2%;
+}
+
+h2,
+.second-headline {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--viridian-green);
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+hr {
+    border: dotted 6px #000000;
+    color: #ffffff;
+    border-bottom: none;
+    width: 5%;
+    margin: 150px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------ TITLE SECTION ------------------------------ */
+
+/* _if we specify bootsrap color class in html file, it will have more power than css color definition, so it would be best not to do it; */
+
+.title-class {
+    background-color: var(--azureish-white);
+}
+
+/* ---------- Nav Bar ---------- */
+
+/* _navbar-container; */
+.navbar-custom {
+    padding: 3% 8% 2%;
+}
+
+.avatar-container {
+    background-color: #ffffff;
+    width: 7%;
+    /* _in order not to shrink it more than 70px when changing the responsivness; */
+    min-width: 60px;
+    border-radius: 100%;
+}
+
+/* _in order for picture to take up to 100% of its container; */
+.avatar {
+    width: 100%;
+}
+
+.ul-custom {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* _hamburger color; */
+.fa-burger-custom {
+    color: var(--keppel);
+}
+
+.nav-link {
+    color: var(--keppel);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+}
+
+.about-spn {
+    color: var(--deep-taupe);
+}
+
+/* _hovers; */
+.avatar-container:hover,
+.nav-link:hover,
+.about-spn:hover,
+.fa-custom:hover {
+    /* _if the hovered element is too large, it will go outside of the viewport; */
+    transform: scale(1.1);
+    color: var(--keppel);
+}
+
+/* ---------- Top Container ---------- */
+
+.underline-span {
+    text-decoration: underline;
+}
+
+/* _it is here just to position the image; probably not a good idea to position image this way, but... */
+.top-cloud-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-cloud {
+    width: 9%;
+    min-width: 80px;
+    margin-right: 20%;
+}
+
+.bottom-cloud {
+    width: 11%;
+    min-width: 100px;
+    margin-top: -10%;
+    margin-right: 65%;
+}
+
+.mountain-img {
+    width: 65%;
+    min-width: 220px;
+}
+
+/* ------------------------------ MENU SECTION ------------------------------ */
+
+/* ---------- Profile ---------- */
+
+.profile-img {
+    margin-top: -7%;
+    width: 12%;
+    min-width: 110px;
+    margin-bottom: 6%;
+}
+
+.intro {
+    width: 34%;
+    margin: 3% auto;
+}
+
+/* ---------- Menu ---------- */
+
+.container-custom-menu {
+    padding: 8% 8% 0 8%;
+}
+
+.item-img {
+    width: 35%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    min-width: 60px;
+}
+
+/* _'About' image is special one so it required special class; */
+.item-img-special {
+    background-color: var(--azureish-white);
+    border-radius: 100%;
+}
+
+.item-link {
+    color: var(--outer-space);
+}
+
+.item-title {
+    color: var(--keppel);
+    font-weight: normal;
+}
+
+/* _hover; */
+.col-custom:hover {
+    transform: scale(1.1);
+    color: var(--outer-space);
+}
+
+/* ------------------------------ ABOUT SECTION ------------------------------ */
+
+.about-me {
+    padding-top: 20px;
+}
+
+.about-me-item {
+    width: 50%;
+    margin: 120px auto 120px auto;
+    text-align: left;
+}
+
+.general-img {
+    width: 25%;
+    border-radius: 100%;
+    min-width: 80px;
+}
+
+.left-img {
+    float: left;
+    margin-right: 30px;
+}
+
+.right-img {
+    float: right;
+    margin-left: 30px;
+}
+
+.peter-pan-img {
+    background-color: var(--keppel);
+}
+
+/* ------------------------------ EDUCATION SECTION ------------------------------ */
+
+.education-container {
+    padding: 20px 0 0 0;
+}
+
+.carousel-inner {
+    margin: auto;
+    padding: 100px 15% 10px;
+}
+
+.education-heading {
+    margin: 40px auto 30px auto;
+    color: var(--outer-space);
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+}
+
+.education-img {
+    margin: 30px auto;
+    display: block;
+    width: 40%;
+    min-width: 100px;
+}
+
+.country-img {
+    margin: 30px auto 10px auto;
+    display: block;
+    border-radius: 100%;
+    width: 60px;
+}
+
+.college {
+    color: var(--outer-space);
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.college:hover {
+    font-weight: bold;
+    color: var(--outer-space);
+}
+
+.fa-hand-custom {
+    font-size: 2rem;
+    color: #ff8b3d;
+}
+
+/* ------------------------------ EXPERIENCE SECTION ------------------------------ */
+
+.experience {
+    padding-top: 20px;
+}
+
+.experience-container {
+    /*background-color: red;
+    /**/
+    padding: 50px 10px 0;
+    display: flex;
+    direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item-box {
+    padding: 1%;
+    /*background-color: red;/**/
+    margin: 2% 2%;
+    width: 25%;
+    min-width: 200px;
+}
+
+.exp-img-container {
+    width: 50%;
+    border-radius: 100%;
+    margin: 0 auto;
+    border: 3px solid var(--azureish-white);
+}
+
+.exp-img-container:hover {
+    transform: scale(1.1);
+}
+
+.exp-img {
+    width: 100%;
+}
+
+.exp-text-container {
+    width: 75%;
+    /*background-color: yellow;/**/
+    margin: 20px auto;
+}
+
+.company-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    color: var(--viridian-green);
+    font-weight: bold;
+}
+
+.position {
+    font-weight: bold;
+    color: var(--keppel);
+}
+
+.time-spent {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ------------------------------ MY WORK SECTION ------------------------------ */
+
+.my-work {
+    padding: 20px 50px;
+    /*background-color: yellow;/**/
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.description {
+    width: 34%;
+    margin: 3% auto;
+}
+
+.work-container {
+    /*background-color: green;/**/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.work-column {
+    background-color: var(--azureish-white);
+    /**/
+    margin: 35px 1%;
+    padding: 0;
+    border-radius: 17px;
+    width: 30%;
+}
+
+.work-column:hover {
+    transform: scale(1.03);
+}
+
+/* Some of the lines bellow will have to be removed once the page is finished! */
+.work-container-special {
+    position: relative;
+}
+
+.work-img {
+    width: 100%;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+}
+
+.work-special-img {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.work-behind-text {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 35%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--viridian-green);
+    border: solid var(--outer-space);
+    padding: 5%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 20px;
+    rotate: -25deg;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--key-lime);
+}
+
+.work-container-special:hover a {
+    opacity: 0.1;
+}
+
+.work-container-special:hover .work-behind-text {
+    opacity: 1;
+}
+
+.work-title {
+    margin: 20px auto;
+}
+
+.tech-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 2%;
+}
+
+.tech-item {
+    margin: 0 1% 5% 1%;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.html {
+    background-color: #f06529;
+}
+
+.css {
+    background-color: #2965f1;
+}
+
+.bootstrap {
+    background-color: #563d7c;
+}
+
+.java-script {
+    background-color: #F0DB4F
+}
+
+.jquery {
+    background-color: #78cff5;
+}
+
+/* ------------------------------ CONTACT SECTION ------------------------------ */
+
+.contact-heading {
+    margin-bottom: 25px;
+}
+
+.contact-me {
+    margin: 75px;
+}
+
+.contact-message {
+    width: 34%;
+    margin: 90px auto;
+}
+
+.bottom-container {
+    background-color: #66bfbf;
+    padding: 50px 0 20px;
+}
+
+.footer-link {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 20px;
+    font-size: 2rem;
+}
+
+.footer-link:hover {
+    color: #eaf6f6;
+}
+
+.copyright-message {
+    color: #eaf6f6;
+    font-size: 0.75rem;
+    padding: 20px 0;
+}
+
+
+/* ---------- RANDOM KNOWLEDGE SHARING ---------- */
+
+/* _In order to set 'position' parameter to 'absolute' vlaue for one element, its parent must have 'position' set to 'relative'; */
+
+/* --------- -RANDOM KNOWLEDGE SHARING- --------- */
+
+
+/* ---------- MEDIA QUERY ---------- */
+
+/* ---------- RANDOM KNOWLEDGE SHARING ---------- */
+
+/* _VIEWPORT SIZES (IN PIXELS)
+
+    - xs= 0-767 pixels
+    - sm = 768-991 pixels
+    - md = 992-1199 pixels
+    - lg = 1200 pixels and up
+*/
+
+/* --------- -RANDOM KNOWLEDGE SHARING- --------- */
+
+@media (max-width: 991px) {
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    /* ------------------------------ TITLE SECTION ------------------------------ */
+
+    /* ---------- Top Container ---------- */
+
+    .second-headline {
+        font-size: 1.3rem;
+    }
+
+    /* ------------------------------ MY WORK SECTION ------------------------------ */
+
+    .work-column {
+        width: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    h1 {
+        font-size: 4.7rem;
+    }
+
+    hr {
+        margin: 100px auto;
+    }
+
+    /* ------------------------------ TITLE SECTION ------------------------------ */
+
+    /* ---------- Nav Bar ---------- */
+
+    .navbar-custom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .ul-custom {
+        margin: 3% auto 3%;
+    }
+
+    /* ---------- Top Container ---------- */
+
+    .second-headline {
+        font-size: 1.1rem;
+    }
+
+    .top-cloud {
+        margin-right: 20%;
+        margin-top: 2%;
+        margin-bottom: 8%;
+    }
+
+    .bottom-cloud {
+        margin-top: 0;
+        margin-right: 65%;
+    }
+
+    /* ------------------------------ MENU SECTION ------------------------------ */
+
+    /* ---------- Profile ---------- */
+
+    .profile-img {
+        margin-top: 13%;
+    }
+
+    .intro {
+        margin: 6% auto;
+        width: 60%;
+    }
+
+    /* ---------- Menu ---------- */
+
+    .col-custom {
+        margin-bottom: 10%;
+    }
+
+    .item-img {
+        width: 15%;
+    }
+
+    /* _hover; */
+    .col-custom:hover {
+        transform: scale(1);
+        opacity: .8;
+    }
+
+    /* ------------------------------ ABOUT SECTION ------------------------------ */
+
+    .about-me-item {
+        width: 70%;
+    }
+
+    /* ------------------------------ EDUCATION SECTION ------------------------------ */
+
+    .education-heading {
+        font-size: 1.7rem;
+    }
+
+    .country-img {
+        width: 40px;
+    }
+
+    .fa-hand-custom {
+        font-size: 1rem;
+    }
+
+    /* ------------------------------ MY WORK SECTION ------------------------------ */
+
+    .work-column {
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    /* ------------------------------ CONTACT SECTION ------------------------------ */
+
+    .contact-me {
+        width: 70%;
+        margin: 75px auto;
+    }
+    .contact-message {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    /* ------------------------------ MENU SECTION ------------------------------ */
+
+    /* ---------- Menu ---------- */
+
+    .item-img {
+        width: 25%;
+    }
+}
+
+@media (max-width: 360px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
+    /* ------------------------------ TITLE SECTION ------------------------------ */
+
+    /* ---------- Top Container ---------- */
+
+    .second-headline {
+        font-size: 1rem;
+    }
+
+    /* ------------------------------ ABOUT SECTION ------------------------------ */
+
+    .about-me-item {
+        text-align: center;
+    }
+
+    .general-img {
+        margin: 0 auto 10px;
+    }
+
+    .left-img,
+    .right-img {
+        float: none;
+    }
+
+    /* ------------------------------ EDUCAITON SECTION ------------------------------ */
+
+    .education-heading {
+        font-size: .8rem;
+    }
+
+    .college {
+        font-size: .8rem;
+    }
+
+    /* ------------------------------ EXPERIENCE SECTION ------------------------------ */
+
+    .exp-img-container:hover {
+        transform: scale(1);
+        opacity: .8;
+    }
+
+    .company-name {
+        font-size: 1.1rem;
+    }
+    
+    /* ------------------------------ MY WORK SECTION ------------------------------ */
+
+    .work-column:hover {
+        transform: scale(1);
+        opacity: .8;
+    }
+
+    .tech-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2%;
+    }
+
+    .tech-item {
+        font-size: .7rem;
+    }
+}
